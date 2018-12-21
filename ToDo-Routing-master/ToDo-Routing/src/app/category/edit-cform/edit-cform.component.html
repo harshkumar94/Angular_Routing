@@ -1,0 +1,21 @@
+
+<div><h1>Edit Category</h1></div>
+<div class="row">
+  <div class="col">
+    <form>
+      
+      <div class="form-group">
+        <label for="category">Category</label>
+        <input type="text"
+          class="form-control"
+          name="category"
+          [(ngModel)]="cats.catname[id].name"
+
+          >
+      </div>
+      <button class="btn btn-warning mr-2" (click)="onClearClick()">Clear</button>
+      <button class="btn btn-primary " (click)="onSubmitOfEdit(cname)">Submit</button>
+      <button class="btn btn-danger ml-2" (click)="onCancleOfEdit()">Cancel</button>
+    </form>
+  </div>
+</div>

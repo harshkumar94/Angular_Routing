@@ -1,0 +1,44 @@
+  
+  <div class="row">
+    <div class="col">
+        <div class="row">
+            <div class="col ml-auto">
+              <button
+                class="float-right btn btn-primary my-2" (click)="onCatNewButtonClick()">
+                New
+              </button>
+            </div>
+          </div>
+        
+      <table class="table my-2">
+        <thead class="thead-dark">
+        <tr>
+          
+          <th scope="col">CategoryName</th>
+          <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cat of catname;let i = index">
+            
+            <td >{{cat.name}}</td>
+            <td>  
+                <div class="col">
+                  <button class="btn btn-primary" (click)="onEditClicked(i)">Edit</button>
+                  <button type="button" value="Remove" class="btn btn-danger ml-2" (click)="deleteFieldValue(cat)">Delete</button>
+                </div> </td>
+                </tr>
+
+                <tr>
+                    
+
+               
+        </tbody>
+      </table>
+    </div>
+    <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+  
+  
